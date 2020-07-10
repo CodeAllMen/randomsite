@@ -7,6 +7,7 @@ import markdown
 from random import shuffle, randint
 
 
+@app.route('/')
 @app.route('/blog/', methods=['GET'])
 def index():
     page = 1
@@ -196,7 +197,6 @@ def post_detail(postname):
     return render_template('post.html', post=post, current_post=current_post, en=False)
 
 
-@app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
