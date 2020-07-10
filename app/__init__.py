@@ -2,12 +2,11 @@ from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-#from flask_admin import Admin
-#from flask_admin.contrib.sqla import ModelView
-#from app.models import User, Post
+# from flask_admin import Admin
+# from flask_admin.contrib.sqla import ModelView
+# from app.models import User, Post
 from flaskext.markdown import Markdown
 from flask_login import LoginManager
-
 
 app = Flask(__name__)
 
@@ -26,14 +25,15 @@ login.login_message = 'Access denied.'
 login.init_app(app)
 
 Markdown(app)
-migrate = Migrate(app,db)
+migrate = Migrate(app, db)
 
-#admin = Admin(app)
-#admin.add_View(ModelView(User, db.session))
-#admin.add_View(ModelView(Post, db.session))
+# admin = Admin(app)
+# admin.add_View(ModelView(User, db.session))
+# admin.add_View(ModelView(Post, db.session))
 
 from app import routes, models
 from app.models import User_, query_user
+
 
 @login.user_loader
 def load_user(user_id):
