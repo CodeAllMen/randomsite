@@ -62,7 +62,6 @@ def en():
 
 
 @app.route('/blog/yoga')
-@login_required
 def yoga():
     page = 1
 
@@ -86,7 +85,6 @@ def yoga():
 
 
 @app.route('/blog/eventos')
-@login_required
 def eventos():
     page = 1
 
@@ -110,7 +108,6 @@ def eventos():
 
 
 @app.route('/blog/meditacion')
-@login_required
 def meditacion():
     page = 1
 
@@ -134,7 +131,6 @@ def meditacion():
 
 
 @app.route('/blog/mindfulness')
-@login_required
 def mindfulness():
     page = 1
 
@@ -158,7 +154,6 @@ def mindfulness():
 
 
 @app.route('/blog/yogis')
-@login_required
 def yogis():
     page = 1
 
